@@ -5,7 +5,7 @@ This project focuses on Trajectory Visualization and Storage for AMR Navigation 
 
 ## 1. Setup the Workspace
 
-Navigate to the `amr_trajectory_manager` folder and build the package:
+Navigate to the `amr_trajectory` folder and build the package:
 
 
 ```bash cd ~/amr_trajectory
