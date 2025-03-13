@@ -8,9 +8,10 @@ This project focuses on Trajectory Visualization and Storage for AMR Navigation 
 Navigate to the `amr_trajectory_manager` folder and build the package:
 
 
-cd ~/amr_trajectory_manager
+```bash cd ~/amr_trajectory_manager
 colcon build
 source install/setup.bash
+```
 
 
 ## 2. Launching the Simulation Environment
