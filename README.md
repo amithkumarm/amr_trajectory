@@ -8,7 +8,7 @@ This project focuses on Trajectory Visualization and Storage for AMR Navigation 
 Navigate to the `amr_trajectory_manager` folder and build the package:
 
 
-```bash cd ~/amr_trajectory_manager
+```bash cd ~/amr_trajectory
 colcon build
 source install/setup.bash
 ```
@@ -18,33 +18,33 @@ source install/setup.bash
 
 To start an empty world in Gazebo with the TurtleBot3:
 
-
+```bash
 ros2 launch turtlebot3_gazebo empty_world.launch.py
-
+```
 
 ## 3. Moving the TurtleBot3 Autonomously
 
 Run the autonomous movement node:
 
-
+```bash
 ros2 run amr_trajectory_manager turtlebot3_autonomous
-
+```
 
 ## 4. Launching the Trajectory Saver and Visualizer
 
 Run the trajectory logger node, specifying the directory to save trajectory data:
 
-
+```bash
 ros2 launch amr_trajectory_manager trajectory_logger.launch.py trajectory_directory:=<folder_directory>
-
+```
 
 ## 5. Saving the Trajectory Data
 
 Call the service to save the trajectory with a specified filename and duration:
 
-
+```bash
 ros2 service call /save_trajectory amr_trajectory_msgs/srv/SaveTrajectory "{filename: 'trajectory.csv', duration: 30.0}"
-
+```
 
 (Change the filename and duration as needed.)
 
@@ -52,9 +52,9 @@ ros2 service call /save_trajectory amr_trajectory_msgs/srv/SaveTrajectory "{file
 
 Launch RViz2:
 
-
+```bash
 rviz2
-
+```
 
 Then:
 
@@ -66,9 +66,9 @@ Then:
 
 To stop the trajectory saver and visualizer node, use:
 
-
+```bash
 Ctrl + C
-
+```
 
 This will save the trajectory data to a CSV file.
 
@@ -76,9 +76,9 @@ This will save the trajectory data to a CSV file.
 
 Launch the trajectory reader node with the saved trajectory file:
 
-
+```bash
 ros2 launch amr_trajectory_manager trajectory_reader.launch.py trajectory_file:=/home/amith/trajectory1.csv
-
+```
 
 (Change the trajectory file path to match your saved file.)
 
@@ -86,9 +86,9 @@ ros2 launch amr_trajectory_manager trajectory_reader.launch.py trajectory_file:=
 
 Launch RViz2 again:
 
-
+```bash
 rviz2
-
+```
 
 Then:
 
